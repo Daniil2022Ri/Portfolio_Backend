@@ -13,7 +13,7 @@ const translations = {
     aboutLabel: '02 // ABOUT',
     aboutTitle: 'Рыбьяков',
     aboutName: 'Даниил',
-    aboutText1: 'Fullstack-разработчик с 4+ годами опыта. Специализируюсь на проектировании и разработке микросервисных архитектур в финтехе и e-commerce. Превращаю сложные бизнес-требования в надежный, тестируемый и масштабируемый код.',
+    aboutText1: 'Java-разработчик с 4+ годами опыта. Специализируюсь на проектировании и разработке микросервисных архитектур в финтехе и e-commerce. Превращаю сложные бизнес-требования в надежный, тестируемый и масштабируемый код.',
     aboutText2: 'Мой фокус: отказоустойчивость (Resilience), производительность и чистая архитектура (DDD, CQRS). Во фронтенде придерживаюсь принципов компонентного подхода, pixel-perfect верстки и плавного UX.',
     aboutFocus: 'Фокус: Масштабируемость, Отказоустойчивость, Чистая архитектура.',
     skillsLabel: 'ТЕХНОЛОГИЧЕСКИЙ СТЕК',
@@ -37,7 +37,12 @@ const translations = {
     navFrontend: '04 // FRONTEND',
     navContact: '05 // КОНТАКТЫ',
     scrollHint: 'ПРОКРУТИТЕ ВНИЗ',
-    
+    mobileLabel: '05 // MOBILE PROJECTS',
+    mobileTitle: 'Android',
+    mobileSubtitle: 'Разработка',
+    mobileDesc: 'Нативные мобильные приложения на Kotlin с современным UI/UX и локальной обработкой данных.',
+    navMobile: '05 // MOBILE',
+
     langRu: 'RU',
     langEn: 'EN'
   },
@@ -52,7 +57,7 @@ const translations = {
     aboutLabel: '02 // ABOUT',
     aboutTitle: 'Rybiyakov',
     aboutName: 'Daniil',
-    aboutText1: 'Fullstack developer with 4+ years of experience. Specialized in designing and building microservice architectures in fintech and e-commerce. I turn complex business requirements into reliable, testable, and scalable code.',
+    aboutText1: 'Java developer with 4+ years of experience. Specialized in designing and building microservice architectures in fintech and e-commerce. I turn complex business requirements into reliable, testable, and scalable code.',
     aboutText2: 'My focus: Resilience, performance, and clean architecture (DDD, CQRS). In frontend, I adhere to component-driven development, pixel-perfect markup, and smooth UX.',
     aboutFocus: 'Focus: Scalability, Resilience, Clean Architecture.',
     skillsLabel: 'TECH STACK',
@@ -76,6 +81,13 @@ const translations = {
     navFrontend: '04 // FRONTEND',
     navContact: '05 // CONTACT',
     scrollHint: 'SCROLL DOWN',
+    mobileLabel: '05 // MOBILE PROJECTS',
+    mobileTitle: 'Android',
+    mobileSubtitle: 'Development',
+    mobileDesc: 'Native mobile applications in Kotlin with modern UI/UX and local data processing.',
+    navMobile: '05 // MOBILE',
+
+
     langRu: 'RU',
     langEn: 'EN'
   }
@@ -96,53 +108,68 @@ const backendProjects = [
 
 const frontendProjects = [
   {
-    id: 1, 
-    title: 'TechStore Dashboard', 
-    titleEn: 'TechStore Dashboard', 
-    desc: 'SPA интернет-магазина. Сложная фильтрация, управление состоянием корзины, адаптивная сетка, темная тема.', 
+    id: 1,
+    title: 'TechStore Dashboard',
+    titleEn: 'TechStore Dashboard',
+    desc: 'SPA интернет-магазина. Сложная фильтрация, управление состоянием корзины, адаптивная сетка, темная тема.',
     descEn: 'E-commerce SPA. Complex filtering, cart state management, responsive grid, dark theme.',
-    stack: ['Vue 3', 'Composition API', 'CSS Grid', 'Pinia'], 
+    stack: ['Vue 3', 'Composition API', 'CSS Grid', 'Pinia'],
     color: '#6366f1',
     github: './Normal_verstka_Web/Site_Gadjet_Store/index.html',
     preview: `<div style="background:#0a0a0f;padding:20px;border-radius:12px;height:100%;display:flex;flex-direction:column;gap:8px"><div style="height:8px;width:60%;background:linear-gradient(90deg,#6366f1,#a855f7);border-radius:4px"></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;flex:1"><div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px"><div style="height:30px;font-size:20px">📱</div></div><div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px"><div style="height:30px;font-size:20px">🎧</div></div><div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px"><div style="height:30px;font-size:20px">⌚</div></div><div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px"><div style="height:30px;font-size:20px">🔌</div></div></div></div>`
   },
   {
-    id: 2, 
-    title: 'Sneaker Store Platform', 
-    titleEn: 'Sneaker Store Platform', 
-    desc: 'Интерактивный e-commerce интерфейс с параллакс-эффектами, оптимизированными CSS-анимациями и реактивным управлением состоянием избранного.', 
+    id: 2,
+    title: 'Sneaker Store Platform',
+    titleEn: 'Sneaker Store Platform',
+    desc: 'Интерактивный e-commerce интерфейс с параллакс-эффектами, оптимизированными CSS-анимациями и реактивным управлением состоянием избранного.',
     descEn: 'Interactive e-commerce interface with parallax effects, optimized CSS animations, and reactive favorites state management.',
-    stack: ['React 18', 'useMemo', 'CSS Animations', 'Local Storage'], 
+    stack: ['React 18', 'useMemo', 'CSS Animations', 'Local Storage'],
     color: '#ec4899',
     github: './Normal_verstka_Web/Site_shooth_Store/index.html',
     preview: `<div style="background:#0c0c12;padding:20px;border-radius:12px;height:100%;display:flex;flex-direction:column;gap:8px"><div style="height:8px;width:50%;background:#fff;border-radius:4px"></div><div style="display:flex;gap:8px;flex:1;align-items:center;justify-content:center"><div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:15px;transform:rotate(-8deg)"><span style="font-size:24px">👟</span></div><div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:15px;transform:rotate(6deg)"><span style="font-size:24px">⚽</span></div><div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:15px;transform:rotate(-4deg)"><span style="font-size:24px">🏀</span></div></div></div>`
   },
   {
-    id: 3, 
-    title: 'Travel & Tourism Portal', 
-    titleEn: 'Travel & Tourism Portal', 
-    desc: 'Адаптивный туристический портал с ленивой загрузкой изображений (Lazy Loading), модальными окнами и оптимизированной CSS Grid версткой.', 
+    id: 3,
+    title: 'Travel & Tourism Portal',
+    titleEn: 'Travel & Tourism Portal',
+    desc: 'Адаптивный туристический портал с ленивой загрузкой изображений (Lazy Loading), модальными окнами и оптимизированной CSS Grid версткой.',
     descEn: 'Responsive travel portal with image Lazy Loading, modal windows, and optimized CSS Grid layout.',
-    stack: ['React 18', 'Lazy Loading', 'CSS Grid', 'Responsive Design'], 
+    stack: ['React 18', 'Lazy Loading', 'CSS Grid', 'Responsive Design'],
     color: '#06b6d4',
     github: './Normal_verstka_Web/Site_Travel_Store/index.html',
     preview: `<div style="background:#08080f;padding:20px;border-radius:12px;height:100%;display:flex;flex-direction:column;gap:8px"><div style="height:8px;width:70%;background:linear-gradient(90deg,#7c3aed,#06b6d4);border-radius:4px"></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;flex:1;overflow:hidden"><img src="https://th.bing.com/th/id/OIP.LxVwjrsXVYG0vT-cbfkUkAHaE7?w=234&h=180&c=7&r=0&o=7&pid=1.7&rm=3" style="width:100%;height:100%;object-fit:cover;border-radius:6px;opacity:0.85" alt="Санторини"/><img src="https://th.bing.com/th/id/OIP.KXKMwGm8J9BGupJYJK36_wHaE8?w=266&h=180&c=7&r=0&o=7&pid=1.7&rm=3" style="width:100%;height:100%;object-fit:cover;border-radius:6px;opacity:0.85" alt="Бали"/><img src="https://th.bing.com/th/id/OIP.FaraYcZ1xh91DWAiZvsAOgHaEK?w=299&h=180&c=7&r=0&o=7&pid=1.7&rm=3" style="width:100%;height:100%;object-fit:cover;border-radius:6px;opacity:0.85" alt="Альпы"/></div></div>`
   },
   {
-    id: 4, title: 'WeatherApp', titleEn: 'WeatherApp', 
-    desc: 'Погода в реальном времени. Open-Meteo API, 50+ городов, почасовой прогноз, 7 дней.', 
+    id: 4, title: 'WeatherApp', titleEn: 'WeatherApp',
+    desc: 'Погода в реальном времени. Open-Meteo API, 50+ городов, почасовой прогноз, 7 дней.',
     descEn: 'Real-time weather. Open-Meteo API, 50+ cities, hourly forecast, 7 days.',
     stack: ['React', 'Open-Meteo API', 'Fetch'], color: '#f59e0b',
     github: './Web_API_sites/Weather_monitoring_site/index.html', live: true,
     preview: `<div style="background:#0c1222;padding:20px;border-radius:12px;height:100%;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:28px">☀️</span><span style="font-size:32px;font-weight:800;color:#f59e0b">24°</span></div><div style="display:flex;gap:4px;margin-top:auto"><div style="flex:1;height:30px;background:rgba(245,158,11,0.2);border-radius:4px"></div><div style="flex:1;height:40px;background:rgba(245,158,11,0.3);border-radius:4px"></div><div style="flex:1;height:25px;background:rgba(245,158,11,0.15);border-radius:4px"></div><div style="flex:1;height:35px;background:rgba(245,158,11,0.25);border-radius:4px"></div></div></div>`
   },
   {
-    id: 5, title: 'Real-time Currency Dashboard', titleEn: 'Real-time Currency Dashboard', 
-    desc: 'Финансовый дашборд с интеграцией внешнего API курсов валют. Реализован конвертер, визуализация данных и кэширование запросов.', 
+    id: 5, title: 'Real-time Currency Dashboard', titleEn: 'Real-time Currency Dashboard',
+    desc: 'Финансовый дашборд с интеграцией внешнего API курсов валют. Реализован конвертер, визуализация данных и кэширование запросов.',
     descEn: 'Financial dashboard with external currency exchange API integration. Features converter, data visualization, and request caching.',
     stack: ['React 18', 'ExchangeRate API', 'Chart.js', 'Custom Hooks'], color: '#22c55e',
     github: './Web_API_sites/CurrencyHub/index.html', live: true,
     preview: `<div style="background:#0a0f1a;padding:20px;border-radius:12px;height:100%;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:20px">🇺🇸 → 🇷🇺</span><span style="font-size:24px;font-weight:800;color:#22c55e">91.45</span></div><div style="display:flex;align-items:flex-end;gap:3px;margin-top:auto;height:50px"><div style="flex:1;height:40%;background:rgba(34,197,94,0.3);border-radius:3px"></div><div style="flex:1;height:60%;background:rgba(34,197,94,0.4);border-radius:3px"></div><div style="flex:1;height:50%;background:rgba(34,197,94,0.35);border-radius:3px"></div><div style="flex:1;height:70%;background:rgba(34,197,94,0.5);border-radius:3px"></div><div style="flex:1;height:55%;background:rgba(34,197,94,0.38);border-radius:3px"></div><div style="flex:1;height:80%;background:rgba(34,197,94,0.55);border-radius:3px"></div><div style="flex:1;height:65%;background:rgba(34,197,94,0.45);border-radius:3px"></div></div></div>`
+  }
+
+];
+
+const mobileProjects = [
+  {
+    id: 1,
+    title: 'FlashLingua - Android для изучения английского',
+    titleEn: 'FlashLingua - Android English Learning App',
+    desc: 'Нативное Android-приложение для изучения английского языка с использованием карточек и голосового произношения. Реализована система добавления/удаления карточек, режим случайного изучения, TTS-озвучивание и локальное хранение в Room Database. Архитектура построена на Jetpack Compose с применением MVVM и Coroutines.',
+    descEn: 'Native Android app for learning English using flashcards and voice pronunciation. Features include add/delete card system, random study mode, TTS voice synthesis, and local Room Database storage. Architecture built with Jetpack Compose using MVVM and Coroutines.',
+    stack: ['Kotlin', 'Jetpack Compose', 'Room DB', 'TTS', 'Coroutines', 'MVVM'],
+    color: '#4CAF50',
+    github: 'https://github.com/Daniil2022Ri/AndroidApp_EnglishCard',
+    preview: `<div style="background:#0a0a0f;padding:20px;border-radius:12px;height:100%;display:flex;flex-direction:column;gap:8px"><div style="height:8px;width:40%;background:linear-gradient(90deg,#06b6d4,#0891b2);border-radius:4px"></div><div style="display:flex;gap:8px;flex:1;align-items:center;justify-content:center"><div style="background:rgba(6,182,212,0.08);border-radius:8px;padding:15px"><span style="font-size:24px">👽</span></div></div></div>` 
   }
 ];
 
@@ -152,6 +179,7 @@ const skillCategories = [
   { title: 'Data & Messaging', items: ['PostgreSQL', 'Redis', 'Apache Kafka', 'RabbitMQ', 'Hibernate/JPA'] },
   { title: 'Architecture & Patterns', items: ['Microservices', 'DDD', 'CQRS', 'Event-Driven', 'REST/gRPC'] },
   { title: 'Frontend', items: ['React 18', 'Vue 3', 'TypeScript', 'Next.js', 'Tailwind CSS'] },
+  { title: 'Mobile Development', items: ['Android (Kotlin)', 'Jetpack Compose', 'Room DB', 'MVVM', 'Coroutines', 'TTS'] },
   { title: 'DevOps & Tools', items: ['Docker', 'Kubernetes', 'GitLab CI', 'Grafana', 'JUnit 5/Mockito'] }
 ];
 
@@ -210,10 +238,10 @@ function Particles() {
 }
 
 function ProjectCard({ project, index }) {
-  const { lang } = useLang(); 
+  const { lang } = useLang();
   const [hovered, setHovered] = useState(false);
-  
-  
+
+
   const title = lang === 'ru' ? project.title : (project.titleEn || project.title);
   const desc = lang === 'ru' ? project.desc : (project.descEn || project.desc);
 
@@ -222,10 +250,10 @@ function ProjectCard({ project, index }) {
       <div className="pc-glitch-border"></div>
       <div className="pc-preview" dangerouslySetInnerHTML={{ __html: project.preview }}></div>
       <div className="pc-info">
-        <h3>{title}</h3>   
-        <p>{desc}</p>      
+        <h3>{title}</h3>
+        <p>{desc}</p>
         <div className="pc-stack">{project.stack.map(s => <span key={s} className="pc-tag">{s}</span>)}</div>
-        {project.live && <span className="pc-live">● LIVE</span>} 
+        {project.live && <span className="pc-live">● LIVE</span>}
       </div>
       <div className={`pc-scan ${hovered ? 'active' : ''}`}></div>
     </a>
@@ -252,7 +280,7 @@ function App() {
   const [activeSection, setActiveSection] = useState('hero');
   const [scrollY, setScrollY] = useState(0);
   const [typedText, setTypedText] = useState('');
-  const fullText = 'FULLSTACK DEVELOPER';
+  const fullText = 'JAVA DEVELOPER';
 
   useEffect(() => {
     const onScroll = () => setScrollY(window.scrollY);
@@ -262,9 +290,9 @@ function App() {
 
   useEffect(() => {
     let i = 0;
-    const interval = setInterval(() => { 
-      if (i <= fullText.length) { setTypedText(fullText.slice(0, i)); i++; } 
-      else { clearInterval(interval); } 
+    const interval = setInterval(() => {
+      if (i <= fullText.length) { setTypedText(fullText.slice(0, i)); i++; }
+      else { clearInterval(interval); }
     }, 80);
     return () => clearInterval(interval);
   }, []);
@@ -277,7 +305,7 @@ function App() {
         <Scanlines />
         <Particles />
         <LangSwitcher />
-        
+
         <nav className={`br-nav ${scrollY > 300 ? 'visible' : ''}`}>
           <div className="br-nav-logo">DR</div>
           <div className="br-nav-links">
@@ -285,6 +313,7 @@ function App() {
             <button onClick={() => scrollTo('about')} className={activeSection === 'about' ? 'active' : ''}>{t.navAbout}</button>
             <button onClick={() => scrollTo('backend')} className={activeSection === 'backend' ? 'active' : ''}>{t.navBackend}</button>
             <button onClick={() => scrollTo('frontend')} className={activeSection === 'frontend' ? 'active' : ''}>{t.navFrontend}</button>
+            <button onClick={() => scrollTo('mobile')} className={activeSection === 'mobile' ? 'active' : ''}>{lang === 'ru' ? '05 // MOBILE' : '05 // MOBILE'}</button>
             <button onClick={() => scrollTo('contact')} className={activeSection === 'contact' ? 'active' : ''}>{t.navContact}</button>
           </div>
         </nav>
@@ -315,7 +344,7 @@ function App() {
           <div className="br-section-label">{t.aboutLabel}</div>
           <div className="br-about-grid">
             <div className="br-about-left">
-              <h2 className="br-section-title">{t.aboutTitle}<br/><span className="br-orange">{t.aboutName}</span></h2>
+              <h2 className="br-section-title">{t.aboutTitle}<br /><span className="br-orange">{t.aboutName}</span></h2>
               <p className="br-about-text">{t.aboutText1}</p>
               <p className="br-about-text">{t.aboutText2}</p>
               <div className="br-about-focus">
@@ -336,23 +365,42 @@ function App() {
 
         <section id="backend" className="br-projects">
           <div className="br-section-label">{t.backendLabel}</div>
-          <h2 className="br-section-title">{t.backendTitle}<br/><span className="br-orange">{t.backendSubtitle}</span></h2>
+          <h2 className="br-section-title">{t.backendTitle}<br /><span className="br-orange">{t.backendSubtitle}</span></h2>
           <p className="br-section-desc">{t.backendDesc}</p>
           <div className="br-projects-grid">{backendProjects.map((p, i) => <ProjectCard key={p.id} project={p} index={i} />)}</div>
         </section>
 
         <section id="frontend" className="br-projects">
           <div className="br-section-label">{t.frontendLabel}</div>
-          <h2 className="br-section-title">{t.frontendTitle}<br/><span className="br-orange">{t.frontendSubtitle}</span></h2>
+          <h2 className="br-section-title">{t.frontendTitle}<br /><span className="br-orange">{t.frontendSubtitle}</span></h2>
           <p className="br-section-desc">{t.frontendDesc}</p>
           <div className="br-projects-grid">{frontendProjects.map((p, i) => <ProjectCard key={p.id} project={p} index={i} />)}</div>
+        </section>
+        <section id="mobile" className="br-projects">
+          <div className="br-section-label">
+            {lang === 'ru' ? '05 // MOBILE PROJECTS' : '05 // MOBILE PROJECTS'}
+          </div>
+          <h2 className="br-section-title">
+            {lang === 'ru' ? 'Android' : 'Android'}<br />
+            <span className="br-orange">{lang === 'ru' ? 'Разработка' : 'Development'}</span>
+          </h2>
+          <p className="br-section-desc">
+            {lang === 'ru'
+              ? 'Нативные мобильные приложения на Kotlin с современным UI/UX и локальной обработкой данных.'
+              : 'Native mobile applications in Kotlin with modern UI/UX and local data processing.'}
+          </p>
+          <div className="br-projects-grid">
+            {mobileProjects.map((p, i) => (
+              <ProjectCard key={p.id} project={p} index={i} />
+            ))}
+          </div>
         </section>
 
         <section id="contact" className="br-contact">
           <div className="br-section-label">{t.contactLabel}</div>
           <div className="br-contact-grid">
             <div className="br-contact-left">
-              <h2 className="br-section-title">{t.contactTitle}<br/><span className="br-orange">{t.contactSubtitle}</span></h2>
+              <h2 className="br-section-title">{t.contactTitle}<br /><span className="br-orange">{t.contactSubtitle}</span></h2>
               <p className="br-contact-text">{t.contactText}</p>
               <div className="br-contact-links">
                 <a href="https://github.com/Daniil2022Ri" target="_blank" rel="noopener noreferrer" className="br-contact-link">
@@ -364,7 +412,7 @@ function App() {
                 <a href="tel:+79284102669" className="br-contact-link">
                   <span className="br-link-icon">📞</span><span>+7 (928) 410-26-69</span>
                 </a>
-            
+
                 <a href="https://t.me/danilRyDeveloperFullStack" target="_blank" rel="noopener noreferrer" className="br-contact-link">
                   <span className="br-link-icon">💬</span><span>t.me/danilRyDeveloperFullStack</span>
                 </a>
