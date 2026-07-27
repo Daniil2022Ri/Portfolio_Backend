@@ -13,7 +13,7 @@ const translations = {
     aboutLabel: '02 // ABOUT',
     aboutTitle: 'Рыбьяков',
     aboutName: 'Даниил',
-    aboutText1: 'Fullstack-разработчик с 4+ годами опыта. Специализируюсь на проектировании и разработке микросервисных архитектур в финтехе и e-commerce. Превращаю сложные бизнес-требования в надежный, тестируемый и масштабируемый код.',
+    aboutText1: 'Java-разработчик с 4+ годами опыта. Специализируюсь на проектировании и разработке микросервисных архитектур в финтехе и e-commerce. Превращаю сложные бизнес-требования в надежный, тестируемый и масштабируемый код.',
     aboutText2: 'Мой фокус: отказоустойчивость (Resilience), производительность и чистая архитектура (DDD, CQRS). Во фронтенде придерживаюсь принципов компонентного подхода, pixel-perfect верстки и плавного UX.',
     aboutFocus: 'Фокус: Масштабируемость, Отказоустойчивость, Чистая архитектура.',
     skillsLabel: 'ТЕХНОЛОГИЧЕСКИЙ СТЕК',
@@ -52,7 +52,7 @@ const translations = {
     aboutLabel: '02 // ABOUT',
     aboutTitle: 'Rybiyakov',
     aboutName: 'Daniil',
-    aboutText1: 'Fullstack developer with 4+ years of experience. Specialized in designing and building microservice architectures in fintech and e-commerce. I turn complex business requirements into reliable, testable, and scalable code.',
+    aboutText1: 'Java developer with 4+ years of experience. Specialized in designing and building microservice architectures in fintech and e-commerce. I turn complex business requirements into reliable, testable, and scalable code.',
     aboutText2: 'My focus: Resilience, performance, and clean architecture (DDD, CQRS). In frontend, I adhere to component-driven development, pixel-perfect markup, and smooth UX.',
     aboutFocus: 'Focus: Scalability, Resilience, Clean Architecture.',
     skillsLabel: 'TECH STACK',
@@ -252,7 +252,7 @@ function App() {
   const [activeSection, setActiveSection] = useState('hero');
   const [scrollY, setScrollY] = useState(0);
   const [typedText, setTypedText] = useState('');
-  const fullText = 'FULLSTACK DEVELOPER';
+  const fullText = 'JAVA DEVELOPER';
 
   useEffect(() => {
     const onScroll = () => setScrollY(window.scrollY);
