@@ -331,11 +331,11 @@ function App() {
               <button className="br-btn-primary" onClick={() => scrollTo('backend')}><span className="br-btn-glitch">{t.heroBtnWorks}</span></button>
               <button className="br-btn-ghost" onClick={() => scrollTo('contact')}>{t.heroBtnContact}</button>
             </div>
-            <div className="br-hero-stats">
-              <div><span className="br-stat-num">4+</span><span className="br-stat-label">{t.statJava}</span></div>
-              <div><span className="br-stat-num">5+</span><span className="br-stat-label">{t.statBackend}</span></div>
-              <div><span className="br-stat-num">4+</span><span className="br-stat-label">{t.statFrontend}</span></div>
-            </div>
+            //<div className="br-hero-stats">
+              //<div><span className="br-stat-num">4+</span><span className="br-stat-label">{t.statJava}</span></div>
+              //<div><span className="br-stat-num">5+</span><span className="br-stat-label">{t.statBackend}</span></div>
+              //<div><span className="br-stat-num">4+</span><span className="br-stat-label">{t.statFrontend}</span></div>
+            //</div>
           </div>
           <div className="br-scroll-hint"><span>{t.scrollHint}</span><div className="br-scroll-line"></div></div>
         </section>
