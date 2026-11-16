@@ -116,7 +116,6 @@ const UI = {
     },
     status: {
       pet: 'pet-проект',
-      study: 'учебный',
       demo: 'demo'
     }
   },
@@ -232,7 +231,6 @@ const UI = {
     },
     status: {
       pet: 'pet project',
-      study: 'learning',
       demo: 'demo'
     }
   }
@@ -460,7 +458,7 @@ const PROJECTS = [
   {
     id: 'antifraud',
     cat: 'backend',
-    status: 'study',
+    status: 'pet',
     color: '#ff6b9d',
     title: 'Bank Microservices Prototype',
     tagline: { ru: 'Первая версия банка · 7 сервисов', en: 'First bank iteration · 7 services' },
@@ -503,15 +501,15 @@ const PROJECTS = [
         ]
       },
       quality: {
-        ru: 'Учебный прототип без полного покрытия тестами: его ценность в архитектурных решениях, которые затем были доведены до продакшн-подхода в Bank-DDD.',
-        en: 'A learning prototype without full test coverage: its value is in the architectural decisions later matured into a production-style approach in Bank-DDD.'
+        ru: 'Пет-прототип без полного покрытия тестами: его ценность в архитектурных решениях, которые затем были доведены до продакшн-подхода в Bank-DDD.',
+        en: 'A pet prototype without full test coverage: its value is in the architectural decisions later matured into a production-style approach in Bank-DDD.'
       }
     }
   },
   {
     id: 'data-layer',
     cat: 'backend',
-    status: 'study',
+    status: 'pet',
     color: '#4dd0e1',
     title: 'Spring MVC + Hibernate',
     tagline: { ru: 'MVC · DAO · JPA · Thymeleaf', en: 'MVC · DAO · JPA · Thymeleaf' },
@@ -552,15 +550,15 @@ const PROJECTS = [
         ]
       },
       quality: {
-        ru: 'Учебный проект: фокус на устройстве MVC и ORM, без микросервисной инфраструктуры и тестовой пирамиды.',
-        en: 'A learning project: focused on MVC and ORM mechanics, without microservice infrastructure or a test pyramid.'
+        ru: 'Пет-проект: фокус на устройстве MVC и ORM, без микросервисной инфраструктуры и тестовой пирамиды.',
+        en: 'A pet project: focused on MVC and ORM mechanics, without microservice infrastructure or a test pyramid.'
       }
     }
   },
   {
     id: 'auth',
     cat: 'backend',
-    status: 'study',
+    status: 'pet',
     color: '#ff2f6d',
     title: 'Centralized Auth Service',
     tagline: { ru: 'Spring Security · RBAC · BCrypt', en: 'Spring Security · RBAC · BCrypt' },
@@ -856,7 +854,7 @@ const PROJECTS = [
   {
     id: 'flashlingua',
     cat: 'mobile',
-    status: 'study',
+    status: 'pet',
     color: '#7ee787',
     title: 'FlashLingua',
     tagline: { ru: 'Jetpack Compose · Room · MVVM', en: 'Jetpack Compose · Room · MVVM' },
@@ -897,8 +895,8 @@ const PROJECTS = [
         ]
       },
       quality: {
-        ru: 'Учебный Android-проект на Kotlin: современный стек, локальная БД и работа с системным TTS.',
-        en: 'A learning Android project in Kotlin: a modern stack, a local database and system TTS integration.'
+        ru: 'Пет-проект на Kotlin: современный стек, локальная БД и работа с системным TTS.',
+        en: 'A pet project in Kotlin: a modern stack, a local database and system TTS integration.'
       }
     }
   }
