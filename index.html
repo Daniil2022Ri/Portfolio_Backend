@@ -3,12 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Java Developer — Portfolio Daniil Rybiakov</title>
+  <title>Даниил Рыбьяков — Java Backend Engineer · Portfolio</title>
+  <meta name="description" content="Портфолио Java Backend разработчика: Bank-DDD из семи микросервисов, DDD, JWT, AOP-аудит, 207 тестов и 80% покрытия. Технические разборы каждого проекта.">
+  <meta name="author" content="Daniil Rybiakov">
+  <meta name="theme-color" content="#050508">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Даниил Рыбьяков — Java Backend Engineer">
+  <meta property="og:description" content="Микросервисы, DDD, JWT, аудит и тесты. Флагманский кейс — Bank-DDD: 7 сервисов, 207 тестов, 80,3% покрытия.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23050508'/%3E%3Crect x='3' y='3' width='58' height='58' rx='6' fill='none' stroke='%23ff9d00' stroke-width='2'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='26' font-weight='700' fill='%23ff9d00' text-anchor='middle'%3EDR%3C/text%3E%3C/svg%3E">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="root"></div>
+  <noscript>
+    <div style="font-family:monospace;color:#ff9d00;padding:3rem;text-align:center;background:#050508;min-height:100vh">
+      Для просмотра портфолио включите JavaScript.<br><br>
+      Java Backend Engineer · hhffcgubv@gmail.com · github.com/Daniil2022Ri
+    </div>
+  </noscript>
+  <div id="boot-error" style="display:none;position:fixed;inset:0;z-index:999;place-items:center;padding:2rem;background:#050508;font-family:ui-monospace,monospace;color:#9a9ab0">
+    <div style="max-width:560px;border:1px solid rgba(255,157,0,.35);background:rgba(255,157,0,.05);padding:1.5rem;line-height:1.7">
+      <div style="color:#ff9d00;font-weight:700;margin-bottom:.6rem">// СТРАНИЦА НЕ ЗАГРУЗИЛАСЬ</div>
+      Если вы открыли <code>index.html</code> напрямую с диска, браузер блокирует загрузку <code>script.js</code>.
+      Запустите локальный сервер из папки проекта — например, <code>python -m http.server</code> —
+      и откройте <code>http://localhost:8000</code>. На GitHub Pages сайт работает как обычно.
+    </div>
+  </div>
+  <script>
+    window.setTimeout(function () {
+      var root = document.getElementById('root');
+      var box = document.getElementById('boot-error');
+      if (root && box && root.children.length === 0) {
+        box.style.display = 'grid';
+      }
+    }, 8000);
+  </script>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
